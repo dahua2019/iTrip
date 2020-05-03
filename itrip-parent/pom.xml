@@ -25,7 +25,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!-- 配置 Spring Boot Starter Web 的依赖关系 [END] -->
+		<!-- 配置 Spring Boot Starter Web 依赖关系 [END] -->
 
 		<!-- 配置 Spring Boot Devtools 项目热部署依赖关系 [BEGIN] -->
 		<dependency>
