@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                                http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.ekgc.itrip</groupId>
+	<artifactId>itrip-parent</artifactId>
+	<version>2.0.0</version>
+	<packaging>pom</packaging>
+
+	<!-- 配置 Spring Boot Starter Parent 作为项目整体的父级依赖 [BEGIN] -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.12.RELEASE</version>
+	</parent>
+	<!-- 配置 Spring Boot Starter Parent 作为项目整体的父级依赖 [END] -->
+
+	<!-- 配置所有子模块所需要的共同的依赖关系 [BEGIN] -->
+	<dependencies>
+		<!-- 配置 Spring Boot Starter Web 依赖关系 [BEGIN] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- 配置 Spring Boot Starter Web 依赖关系 [END] -->
+
+		<!-- 配置 Spring Boot Devtools 项目热部署依赖关系 [BEGIN] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<!-- 配置 Spring Boot Devtools 项目热部署依赖关系 [END] -->
+	</dependencies>
+	<!-- 配置所有子模块所需要的共同的依赖关系 [END] -->
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- 引入 Spring Cloud Dependencies 的相关依赖关系 [BEGIN] -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Greenwich.SR5</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- 引入 Spring Cloud Dependencies 的相关依赖关系 [END] -->
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- 配置 Spring Boot Maven Plugin 打包插件 [BEGIN] -->
+				<!-- 打包命令 mvn package spring-boot:repackage -->
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<!-- 配置 Spring Boot Maven Plugin 打包插件 [END] -->
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
