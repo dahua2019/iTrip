@@ -2,18 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                                http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>itrip-commons</artifactId>
+  <artifactId>itrip-auth-consumer</artifactId>
   <packaging>jar</packaging>
 
-  <!-- 配置使用itrip-parent作为项目的父级依赖关系 [BEGIN] -->
+  <!-- 配置父级依赖项目 itrip-parent [BEGIN] -->
   <parent>
-    <artifactId>itrip-parent</artifactId>
     <groupId>cn.ekgc.itrip</groupId>
+    <artifactId>itrip-parent</artifactId>
     <version>2.0.0</version>
   </parent>
-  <!-- 配置使用itrip-parent作为项目的父级依赖关系 [END] -->
+  <!-- 配置父级依赖项目 itrip-parent [END] -->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,47 +22,13 @@
   </properties>
 
   <dependencies>
+    <!-- 配置itrip-commons项目依赖关系 [BEGIN] -->
     <dependency>
-      <groupId>net.bookrain</groupId>
-      <artifactId>swagger2</artifactId>
-      <version>0.0.1</version>
+      <groupId>cn.ekgc.itrip</groupId>
+      <artifactId>itrip-commons</artifactId>
+      <version>${project.parent.version}</version>
     </dependency>
-
-    <!-- 配置Provider端和Consumer端共同需要的Cloud Client依赖关系 [BEGIN] -->
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-    </dependency>
-    <!-- 配置Provider端和Consumer端共同需要的Cloud Client依赖关系 [BEGIN] -->
-
-    <!-- 配置Spring Cloud OpenFeign的依赖关系 [BEGIN] -->
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-openfeign</artifactId>
-    </dependency>
-    <!-- 配置Spring Cloud OpenFeign的依赖关系 [END] -->
-
-    <!-- 配置 Spring Boot Starter Mail 依赖关系 [BEGIN] -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-mail</artifactId>
-    </dependency>
-    <!-- 配置 Spring Boot Starter Mail 依赖关系 [END] -->
-
-    <!-- 配置 Redis 的依赖关系 [BEGIN] -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-redis</artifactId>
-    </dependency>
-    <!-- 配置 Redis 的依赖关系 [END] -->
-
-    <!-- 配置容联云组件所需要的依赖关系 [BEGIN] -->
-    <dependency>
-      <groupId>com.cloopen</groupId>
-      <artifactId>java-sms-sdk</artifactId>
-      <version>1.0.1</version>
-    </dependency>
-    <!-- 配置容联云组件所需要的依赖关系 [END] -->
+    <!-- 配置itrip-commons项目依赖关系 [END] -->
 
     <dependency>
       <groupId>junit</groupId>

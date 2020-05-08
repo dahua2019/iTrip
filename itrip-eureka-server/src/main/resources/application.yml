@@ -4,7 +4,7 @@ server:
 ### 项目名称
 spring:
   application:
-    name: eureka-server
+    name: itrip-eureka-server
 eureka:
   instance:
     hostname: localhost
@@ -14,4 +14,4 @@ eureka:
     ### 禁止注册中心去其他注册中心发现服务
     fetch-registry: false
     service-url:
-      defautlZone: http://${eureka.instance.hostname}:${server.port}/eureka
+      defautlZone: http://${eureka.instance.hostname}:${server.port}/eureka/

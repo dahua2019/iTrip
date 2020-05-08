@@ -1,0 +1,4 @@
+### 配置 redis 的端口号
+spring:
+  redis:
+    port: 6379

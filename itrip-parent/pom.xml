@@ -27,12 +27,6 @@
 		</dependency>
 		<!-- 配置 Spring Boot Starter Web 依赖关系 [END] -->
 
-		<!-- 配置 Spring Boot Devtools 项目热部署依赖关系 [BEGIN] -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-		<!-- 配置 Spring Boot Devtools 项目热部署依赖关系 [END] -->
 	</dependencies>
 	<!-- 配置所有子模块所需要的共同的依赖关系 [END] -->
 
